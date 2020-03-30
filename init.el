@@ -40,23 +40,28 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ivy
      helm
-     auto-completion
      better-defaults
-     go
-     emacs-lisp
      git
      ;; lsp
-     markdown
      multiple-cursors
+     auto-completion
+     syntax-checking
+     ;;language list
+     (go :variable
+         go-tab-width 4
+         go-format-before-save t)
      org
+     markdown
+     emacs-lisp
+     ;; version-control
+     treemacs
+     ;;custom layer
+     jony
+
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;;spell-checking
-     ;; syntax-checking
-     ;; version-control
-     treemacs
-     jony
      )
 
    ;; List of additional packages that will be installed without being
