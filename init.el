@@ -6,10 +6,7 @@
   "Layer configuration:
 This function should only modify configuration layer settings."
   (setq-default
-   ;; Base distribution to use. This is a layer contained in the directory
-   ;; `+distribution'. For now available distributions are `spacemacs-base'
-   ;; or `spacemacs'. (default 'spacemacs)
-   dotspacemacs-distribution 'spacemacs
+   ;; Base distribuemacs-distribution 'spacemacs
 
    ;; Lazy installation of layers (i.e. layers are installed only when a file
    ;; with a supported type is opened). Possible values are `all', `unused'
@@ -42,14 +39,15 @@ This function should only modify configuration layer settings."
      helm
      better-defaults
      git
-     ;; lsp
+     lsp
      multiple-cursors
      auto-completion
      syntax-checking
      ;;language list
-     (go :variable
+     (go :variables
          go-tab-width 4
-         go-format-before-save t)
+         go-format-before-save t
+				 go-backend 'lsp)
      org
      markdown
      emacs-lisp
@@ -62,6 +60,7 @@ This function should only modify configuration layer settings."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;;spell-checking
+
      )
 
    ;; List of additional packages that will be installed without being
@@ -469,16 +468,16 @@ See the header of this file for more information."
   (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
-(setq configuration-layer-elpa-archives
-    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  )
+  (setq configuration-layer-elpa-archives
+				'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+					("org-cn"   . "http://elpa.emacs-china.org/org/")
+					("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+	)
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
