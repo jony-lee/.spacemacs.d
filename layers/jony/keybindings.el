@@ -5,6 +5,7 @@
 
 (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
 
+(spacemacs/set-leader-keys "fej" 'jony/find-jony)
 
 ;;配置快捷键
 

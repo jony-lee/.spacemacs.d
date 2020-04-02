@@ -12,4 +12,5 @@
 (configuration-layer/declare-layers '(
                                       jony-ui
 																			jony-better-defaults
+																			jony-misc
                                       ))
