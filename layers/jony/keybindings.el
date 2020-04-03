@@ -1,13 +1,13 @@
-
+;;取消部分快捷键冲突
+;;evil快捷键冲突
+(define-key evil-motion-state-map (kbd "C-e") nil)
 
 (define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point+)
 
-
-(spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
-
+;;快速访问jony配置
 (spacemacs/set-leader-keys "fej" 'jony/find-jony)
 
-;;配置快捷键
+;;配置自定义快捷键
 
 (spacemacs/set-leader-keys "fer" 'dotspacemacs/sync-configuration-layers)
 
@@ -24,4 +24,7 @@
 (spacemacs/set-leader-keys "dt" 'describe-theme)
 (spacemacs/set-leader-keys "dv" 'describe-variable)
 
+
+;;自定义o系列快捷键
 (spacemacs/set-leader-keys "oc" 'shell-command)
+(spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
