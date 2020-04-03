@@ -10,7 +10,7 @@
 ;;; License: GPLv3
 
 (configuration-layer/declare-layers '(
-                                      jony-ui
-																			jony-better-defaults
-																			jony-misc
+                                      ;;jony-ui
+																			;;jony-better-defaults
+																			;;jony-misc
                                       ))
