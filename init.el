@@ -82,7 +82,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		smooth-scrolling spray spaceline
+																		smooth-scrolling spray spaceline magit-gitflow
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -500,7 +500,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  )
+	(global-hungry-delete-mode t)
+	)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
