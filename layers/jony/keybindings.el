@@ -24,7 +24,10 @@
 (spacemacs/set-leader-keys "dt" 'describe-theme)
 (spacemacs/set-leader-keys "dv" 'describe-variable)
 
-
 ;;自定义o系列快捷键
 (spacemacs/set-leader-keys "oc" 'shell-command)
 (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)
+
+;;项目快捷键
+(spacemacs/set-leader-keys "ps" 'spacemacs/search-project-ag)
+
