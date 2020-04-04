@@ -4,7 +4,9 @@
 
 (define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point+)
 
-;;快速访问jony配置
+(define-key undo-tree-map (kbd "C-/") nil)
+(define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
+;; 快速访问jony配置
 (spacemacs/set-leader-keys "fej" 'jony/find-jony)
 
 ;;配置自定义描述快捷键(一些描述帮助快捷键重新定义)

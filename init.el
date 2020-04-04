@@ -49,7 +49,8 @@ This function should only modify configuration layer settings."
      (go :variables
          go-tab-width 4
          go-format-before-save t
-				 go-backend 'lsp)
+				 ;; go-backend 'lsp
+				 )
      org
      markdown
      emacs-lisp
