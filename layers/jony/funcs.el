@@ -12,7 +12,3 @@
   (let ((directory default-directory))
     (locate-dominating-file directory ".git")))
 
-(defun jony/find-jony()
-	(interactive)
-	(find-file "~/.spacemacs.d/layers/jony/config.el"))
-

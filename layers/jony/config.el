@@ -7,6 +7,7 @@
 
 (setq-default indent-tabs-mode 1)
 (setq-default default-tab-width 4)
+
 ;; reuse dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
