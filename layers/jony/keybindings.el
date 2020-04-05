@@ -6,6 +6,11 @@
 
 (define-key undo-tree-map (kbd "C-/") nil)
 (define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
+;;evil插入模式下的光标移动
+(define-key evil-insert-state-map (kbd "C-j") 'evil-next-line)
+(define-key evil-insert-state-map (kbd "C-k") 'evil-previous-line)
+(define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line)
+(define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
 ;;设置函数区域匹配模式
 (define-key evil-normal-state-map (kbd ".") 'evil-jump-item)
 ;; 快速访问jony配置
