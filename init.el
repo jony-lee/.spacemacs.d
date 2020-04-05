@@ -83,7 +83,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		smooth-scrolling spray spaceline magit-gitflow
+																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present 
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -187,8 +187,8 @@ It should only modify the values of Spacemacs settings."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'.
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((recents . 5)
-                                (projects . 5)
+   dotspacemacs-startup-lists '((recents . 3)
+                                (projects . 3)
 																(agenda . 3))
 
    ;; True if the home buffer should respond to resize events. (default t)

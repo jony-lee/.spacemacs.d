@@ -7,7 +7,7 @@
 
 (setq-default indent-tabs-mode 1)
 (setq-default default-tab-width 4)
-
+(setq org-agenda-files '("~/org-agenda"))
 ;; reuse dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
@@ -32,3 +32,10 @@
 ;; (global-set-key (kbd "C-,") 'pyim-convert-string-at-point)
 ;; (setq pyim-page-tooltip 'popup)
 ;; (setq pyim-page-length 5)
+
+;;配置缩写补全
+(setq-default abbrev-mode 1)
+(define-abbrev-table 'global-abbrev-table '(
+                                            ;; Shifu
+                                            ("8bd" "baidu")
+																						))
