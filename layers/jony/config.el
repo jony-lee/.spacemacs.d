@@ -7,7 +7,12 @@
 
 (setq-default indent-tabs-mode 1)
 (setq-default default-tab-width 4)
-(setq org-agenda-files '("~/space-private/org-agenda"))
+
+;; org setting
+(setq org-todo-keywords
+			'((sequence "TODO(t!)" "NEXT(n)" "WAITTING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")
+				))
+(setq org-agenda-files '("~/org-agenda"))
 ;; reuse dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
