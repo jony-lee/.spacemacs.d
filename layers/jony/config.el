@@ -7,7 +7,7 @@
 
 (setq-default indent-tabs-mode 1)
 (setq-default default-tab-width 4)
-(setq org-agenda-files '("~/org-agenda"))
+(setq org-agenda-files '("~/space-private/org-agenda"))
 ;; reuse dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
