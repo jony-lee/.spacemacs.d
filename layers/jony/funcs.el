@@ -1,3 +1,7 @@
+(defun jony/get-paste-string()
+	(interactive)
+	"test-paste"
+	)
 
 (defun jony/open-file-with-projectile-or-counsel-git ()
   (interactive)
@@ -13,19 +17,18 @@
     (locate-dominating-file directory ".git")))
 
 (defun jony/update-persp-name ()
-    (when (bound-and-true-p persp-mode)
-      ;; There are multiple implementations of
-      ;; persp-mode with different APIs
-      (progn
-             (or (not (string= persp-nil-name (safe-persp-name (get-frame-persp))))
-                 "Default")
-             (let ((name (safe-persp-name (get-frame-persp))))
-               (propertize name
-                           'face 'font-lock-preprocessor-face
-                           'help-echo "Current Layout name.")))))
+	    (when (bound-and-true-p persp-mode)
+	      ;; There are multiple implementations of
+	      ;; persp-mode with different APIs
+	      (progn
+	(or (not (string= persp-nil-name (safe-persp-name (get-frame-persp))))
+	                 "Default")
+	             (let ((name (safe-persp-name (get-frame-persp))))
+	               (propertize name
+	                           'face 'font-lock-preprocessor-face
+	'help-echo "Current Layout name.")))))
 
-
-  ;; (defun spaceline--unicode-number (str)
+;; (defun spaceline--unicode-number (str)
   ;;   "Return a nice unicode representation of a single-digit number STR."
   ;;   (cond
   ;;    ((string= "1" str) "➊")

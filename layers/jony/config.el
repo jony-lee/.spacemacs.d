@@ -1,18 +1,34 @@
-
-;;(global-set-key (kbd "M-s o") 'occur-dwim)
-
-;;(evilified-state-evilify-map occur-mode-map
-;; :mode occur-mode)
-;;(spacemacs/toggle-hungry-delete-on)
-
 (setq-default indent-tabs-mode 1)
 (setq-default default-tab-width 4)
 
 ;; org setting
-(setq org-todo-keywords
-			'((sequence "TODO(t!)" "NEXT(n)" "WAITTING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")
-				))
-(setq org-agenda-files '("~/org-agenda"))
+(with-eval-after-load 'org
+	;; (setq-default org-agenda-files '("~/org-agenda"))
+	(setq org-todo-keywords
+				'((sequence "TODO(t!)" "NEXT(n)" "|" "DONE(d@/!)" "ABORT(a@/!)")
+					))
+	;;快速创建todo事项的模板
+	(setq org-capture-templates
+				'(("t" "GTD" entry (file+headline "~/org-agenda/gtd.org" "工作安排")
+					 "* TODO [#B] %?\n %i\n %U"
+					 :empty-lines 1)
+					("c" "cyclic task" entry (file+headline "~/org-agenda/cyclic-task.org" "周期任务")
+					 "* TODO [#B] %?\n %i\n"
+					 :empty-lines 1)
+					("l" "LEARN" entry (file+headline "~/org-agenda/learn.org" "学习")
+					 "* TODO [#C] %?\n %i\n"
+					 :empty-lines 1)
+					("g" "golang" entry (file+headline "~/org-agenda/learn.org" "golang学习")
+					 "* TODO [#C] %?\n %i\n"
+					 :empty-lines 1)
+					("C" "Clipboard" entry (file+headline "~/org-agenda/clipboard.org" "Quick notes")
+					 "* TODO [#C] %?\n %(jony/get-paste-string) %i\n %U"
+					 )
+					("i" "IDEA" entry (file+headline "~/org-agenda/idea.org" "good idea")
+					 "* TODO [#B] %?\n %i\n"
+					 :empty-lines 1)
+					))
+	)
 ;; reuse dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
