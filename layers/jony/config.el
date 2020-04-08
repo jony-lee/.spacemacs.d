@@ -5,12 +5,18 @@
 (with-eval-after-load 'org
 	;; (setq-default org-agenda-files '("~/org-agenda"))
 	(setq org-todo-keywords
-				'((sequence "TODO(t!)" "NEXT(n)" "|" "DONE(d@/!)" "ABORT(a@/!)")
+				'((sequence "TODO(t!)" "NEXT(n@/!)" "|" "DONE(d@/!)" "ABORT(a@/!)")
 					))
 	;;快速创建todo事项的模板
 	(setq org-capture-templates
 				'(("t" "GTD" entry (file+headline "~/org-agenda/gtd.org" "工作安排")
 					 "* TODO [#B] %?\n %i\n %U"
+					 :empty-lines 1)
+					("c" "cyclic task" entry (file+headline "~/org-agenda/cyclic-task.org" "周期任务")
+					 "* TODO [#B] %?\n %i\n"
+					 :empty-lines 1)
+					("q" "question" entry (file+headline "~/org-agenda/gtd.org" "问题描述")
+					 "* TODO [#B] %?\n 问题描述：%?\n"
 					 :empty-lines 1)
 					("c" "cyclic task" entry (file+headline "~/org-agenda/cyclic-task.org" "周期任务")
 					 "* TODO [#B] %?\n %i\n"

@@ -134,7 +134,7 @@
                  ;; global-mode-string goes in mode-line-misc-info
                  mode-line-misc-info
 
-                 (mode-line-fill 'mode-line 20)
+                 (mode-line-fill 'mode-line 38)
 
 								 ;; line and column
                  ;; '%02' to set to 2 chars at least; prevents flickering
@@ -142,7 +142,7 @@
 
                  '(:eval (buffer-encoding-abbrev))
                  ;; add the time, with the date and the emacs uptime in the tooltip
-                 '(:eval (propertize (format-time-string " %H:%M")
+                 '(:eval (propertize (format-time-string " %Y/%m/%d %H:%M %A") 'face 'font-lock-doc-face
                                      'help-echo
                                      (concat (format-time-string "%c; ")
                                              (emacs-uptime "uptime:%hh"))))
