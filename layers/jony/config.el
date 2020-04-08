@@ -1,6 +1,6 @@
 (setq-default indent-tabs-mode 1)
 (setq-default default-tab-width 4)
-
+(setq create-lockfiles nil)
 ;; org setting
 (with-eval-after-load 'org
 	;; (setq-default org-agenda-files '("~/org-agenda"))
@@ -28,7 +28,7 @@
 					 "* TODO [#C] %?\n %i\n"
 					 :empty-lines 1)
 					("C" "Clipboard" entry (file+headline "~/org-agenda/clipboard.org" "Quick notes")
-					 "* TODO [#C] %?\n %(jony/get-paste-string) %i\n %U"
+					 "* TODO [#C] %?\n clipboard: %(jony/get-paste-string) %i\n %U"
 					 )
 					("i" "IDEA" entry (file+headline "~/org-agenda/idea.org" "good idea")
 					 "* TODO [#B] %?\n %i\n"

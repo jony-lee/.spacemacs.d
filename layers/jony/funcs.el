@@ -1,6 +1,6 @@
 (defun jony/get-paste-string()
 	(interactive)
-	"test-paste"
+	(gui-get-selection 'CLIPBOARD 'UTF8_STRING)
 	)
 
 (defun jony/open-file-with-projectile-or-counsel-git ()
@@ -142,7 +142,7 @@
 
                  '(:eval (buffer-encoding-abbrev))
                  ;; add the time, with the date and the emacs uptime in the tooltip
-                 '(:eval (propertize (format-time-string " %Y/%m/%d %H:%M %A") 'face 'font-lock-doc-face
+                 '(:eval (propertize (format-time-string " %Y-%m-%d %H:%M %A") 'face 'font-lock-doc-face
                                      'help-echo
                                      (concat (format-time-string "%c; ")
                                              (emacs-uptime "uptime:%hh"))))
