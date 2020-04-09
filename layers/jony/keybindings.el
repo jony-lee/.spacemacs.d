@@ -4,7 +4,7 @@
 (define-key evil-motion-state-map (kbd "C-e") nil)
 (define-key evil-motion-state-map (kbd "gb") 'dumb-jump-back)
 ;;org相关操作
-(define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point-tooltip)
 (define-key global-map (kbd "C-c s") 'org-schedule)
 (define-key global-map (kbd "C-c d") 'org-deadline)
 (define-key global-map (kbd "C-c t") 'org-todo)
@@ -19,7 +19,7 @@
 ;;设置函数区域匹配模式
 (define-key evil-normal-state-map (kbd ".") 'evil-jump-item)
 ;; 翻译
-(spacemacs/set-leader-keys "\`" 'youdao-dictionary-search-at-point+)
+(spacemacs/set-leader-keys "\`" 'youdao-dictionary-search-at-point-tooltip)
 ;; 快速访问jony配置
 (spacemacs/set-leader-keys "fer" 'dotspacemacs/sync-configuration-layers)
 (spacemacs/set-leader-keys "fej" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/config.el")))
