@@ -8,6 +8,7 @@
 (define-key global-map (kbd "C-c s") 'org-schedule)
 (define-key global-map (kbd "C-c d") 'org-deadline)
 (define-key global-map (kbd "C-c t") 'org-todo)
+(spacemacs/set-leader-keys-for-major-mode 'org-mode "ic" 'jony/insert-src-block)
 
 (define-key undo-tree-map (kbd "C-/") nil)
 (define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
@@ -24,6 +25,7 @@
 ;; 快速访问jony配置
 (spacemacs/set-leader-keys "fer" 'dotspacemacs/sync-configuration-layers)
 (spacemacs/set-leader-keys "fej" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/config.el")))
+(spacemacs/set-leader-keys "feC" #'(lambda () (interactive) (find-file "~/.spacemacs.d/custom.el")))
 (spacemacs/set-leader-keys "fek" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/keybindings.el")))
 (spacemacs/set-leader-keys "fef" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/funcs.el")))
 ;;配置自定义描述快捷键(一些描述帮助快捷键重新定)
@@ -61,6 +63,7 @@
 (spacemacs/set-leader-keys "ps" 'spacemacs/search-project-ag)
 (spacemacs/set-leader-keys "C-s" 'spacemacs/search-project-auto)
 (define-key evil-normal-state-map (kbd "/") 'swiper)
+(spacemacs/set-leader-keys "pf" 'jony/open-file-with-projectile-or-counsel-git)
 
 ;;配置代码跳转和跳回，建议使用evil-normal-state 绑定的快捷键，少一次SPC操作，更快捷
 (spacemacs/set-leader-keys (kbd "jg") 'spacemacs/jump-to-definition)
