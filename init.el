@@ -43,12 +43,16 @@ This function should only modify configuration layer settings."
      git
      ;;lsp
      multiple-cursors
-     auto-completion
+     (auto-completion :variables
+											;; auto-completion-enable-help-tooltip t
+											auto-completion-enable-sort-by-usage t
+											auto-completion-idle-delay 0.1)
      syntax-checking
      ;;language list
      (go :variables
          go-tab-width 4
          go-format-before-save t
+				 gofmt-command "goimports"
 		 		 go-backend 'lsp
 		 		 )
      org
@@ -83,7 +87,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present 
+																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
