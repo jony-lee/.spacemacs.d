@@ -33,7 +33,8 @@
 
 (spacemacs/set-leader-keys "dB" 'spacemacs/browse-docs-online-at-point)
 (spacemacs/set-leader-keys "db" 'describe-bindings)
-(spacemacs/set-leader-keys "dc" 'describe-char)
+(spacemacs/set-leader-keys "dc" 'customize-group)
+(spacemacs/set-leader-keys "dC" 'describe-char)
 (spacemacs/set-leader-keys "df" 'describe-function)
 (spacemacs/set-leader-keys "dk" 'describe-key)
 (spacemacs/set-leader-keys "dK" 'describe-keymap)

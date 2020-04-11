@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
      ;;helm
      better-defaults
      git
-     ;;lsp
+     lsp
      multiple-cursors
      (auto-completion :variables
 											;; auto-completion-enable-help-tooltip t
@@ -62,7 +62,8 @@ This function should only modify configuration layer settings."
      treemacs
      ;;custom layer
 		 (chinese :variables
-							chinese-enable-youdao-dict t)
+							chinese-enable-youdao-dict t
+              chinese-enable-fcitx t)
 
 		 jony
 
@@ -80,7 +81,11 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(window-numbering path-headerline-mode posframe)
+   dotspacemacs-additional-packages '(
+                                      window-numbering
+                                      path-headerline-mode
+                                      posframe
+                                      )
 
 	 ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -194,7 +199,8 @@ It should only modify the values of Spacemacs settings."
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    dotspacemacs-startup-lists '((recents . 3)
                                 (projects . 3)
-																(agenda . 3))
+																(agenda . 3)
+                                (todos . 3))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -516,4 +522,4 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-)
+  )

@@ -1,9 +1,11 @@
 (defun jony/get-paste-string()
+  "Return string from clipboard"
 	(interactive)
 	(gui-get-selection 'CLIPBOARD 'UTF8_STRING)
 	)
 
 (defun jony/open-file-with-projectile-or-counsel-git ()
+  "Use projectile or counsel-git to search project file"
   (interactive)
   (if (jony/git-project-root)
       (counsel-git)
