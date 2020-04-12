@@ -9,6 +9,19 @@
  '(global-hungry-delete-mode t)
  '(indent-tabs-mode t)
  '(ivy-height 18)
+ '(ivy-initial-inputs-alist
+   (quote
+    ((counsel-minor . "^+")
+     (counsel-package . "^+")
+     (counsel-org-capture . "^")
+     (counsel-M-x . "^")
+     (counsel-describe-function . "")
+     (counsel-describe-variable . "")
+     (org-refile . "^")
+     (org-agenda-refile . "^")
+     (org-capture-refile . "^")
+     (Man-completion-table . "^")
+     (woman . "^"))))
  '(org-agenda-files
    (quote
     ("~/org-agenda/clipboard.org" "~/cook-it/why-it/why-evernote.org" "~/org-agenda/idea.org" "~/go-project/test.org" "/home/jony/org-agenda/gtd.org" "/home/jony/org-agenda/learn.org" "/home/jony/org-agenda/note.org")))
