@@ -11,7 +11,7 @@
  '(ivy-height 18)
  '(org-agenda-files
    (quote
-    ("~/cook-it/why-it/why-evernote.org" "~/org-agenda/idea.org" "~/go-project/test.org" "/home/jony/org-agenda/gtd.org" "/home/jony/org-agenda/learn.org" "/home/jony/org-agenda/note.org")))
+    ("~/org-agenda/clipboard.org" "~/cook-it/why-it/why-evernote.org" "~/org-agenda/idea.org" "~/go-project/test.org" "/home/jony/org-agenda/gtd.org" "/home/jony/org-agenda/learn.org" "/home/jony/org-agenda/note.org")))
  '(org-bullets-bullet-list (quote ("①" "②" "③" "④")))
  '(package-selected-packages
    (quote

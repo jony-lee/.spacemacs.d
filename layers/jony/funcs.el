@@ -30,6 +30,13 @@
 										'face 'font-lock-preprocessor-face
 										'help-echo "Current Layout name.")))))
 
+(defun jony/insert-line-below-and-move()
+  "Insert line below and move cursor to the new line"
+  (interactive)
+  (spacemacs/insert-line-below-no-indent 1)
+  (next-line 1))
+
+
 ;; (defun spaceline--unicode-number (str)
 ;;   "Return a nice unicode representation of a single-digit number STR."
 ;;   (cond
