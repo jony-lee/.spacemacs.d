@@ -516,6 +516,19 @@ before packages are loaded."
   (global-hungry-delete-mode)
   (path-headerline-mode)
   (window-numbering-mode)
+  (setq-default ivy-initial-inputs-alist
+   (quote
+    ((counsel-minor . "^+")
+     (counsel-package . "^+")
+     (counsel-org-capture . "")
+     (counsel-M-x . "")
+     (counsel-describe-function . "")
+     (counsel-describe-variable . "")
+     (org-refile . "^")
+     (org-agenda-refile . "^")
+     (org-capture-refile . "^")
+     (Man-completion-table . "^")
+     (woman . "^"))))
 	)
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
