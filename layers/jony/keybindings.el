@@ -15,7 +15,9 @@
 (spacemacs/set-leader-keys-for-major-mode 'org-mode "ic" 'jony/insert-src-block)
 (with-eval-after-load 'org
   (define-key org-src-mode-map (kbd "C-c C-c") 'org-edit-src-exit)
-
+  (define-key org-mode-map (kbd "<normal-state> RET") 'jony/insert-line-or-open-link)
+  ;;超80字符自动换行
+  (add-hook 'org-mode-hook 'turn-on-auto-fill)
   )
 
 (define-key undo-tree-map (kbd "C-/") nil)
