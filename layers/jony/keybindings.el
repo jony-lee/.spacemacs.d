@@ -21,6 +21,8 @@
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
   )
 
+(define-key dired-mode-map (kbd "<tab>") 'dired-find-file-other-window)
+
 (define-key undo-tree-map (kbd "C-/") nil)
 (define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
 ;;evil插入模式下的光标移动
@@ -32,7 +34,8 @@
 ;;设置函数区域匹配模式
 (define-key evil-normal-state-map (kbd ".") 'evil-jump-item)
 ;; 翻译
-(spacemacs/set-leader-keys "\`" 'youdao-dictionary-search-at-point-tooltip)
+(spacemacs/set-leader-keys "\`" 'spacemacs/alternate-window)
+;; (spacemacs/set-leader-keys "\`" 'youdao-dictionary-search-at-point-tooltip)
 ;; 快速访问jony配置
 (spacemacs/set-leader-keys "fer" 'dotspacemacs/sync-configuration-layers)
 (spacemacs/set-leader-keys "fej" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/config.el")))
