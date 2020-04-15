@@ -113,7 +113,7 @@ but if the current currsor in a link string it will open it.
     (insert "#+END_SRC\n")
     (previous-line 2)
     (org-edit-src-code)))
-
+;; 利用拼音首字母进行中文搜索
 ;; thanks to https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-ivy.el
 (defun jony/re-builder-extended-pattern (str)
   "Build regex compatible with pinyin from STR."

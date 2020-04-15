@@ -12,6 +12,7 @@
 (define-key global-map (kbd "C-c s") 'org-schedule)
 (define-key global-map (kbd "C-c d") 'org-deadline)
 (define-key global-map (kbd "C-c t") 'org-todo)
+(define-key global-map (kbd "C-<return>") 'hippie-expand)
 (spacemacs/set-leader-keys-for-major-mode 'org-mode "ic" 'jony/insert-src-block)
 (with-eval-after-load 'org
   (define-key org-src-mode-map (kbd "C-c C-c") 'org-edit-src-exit)
