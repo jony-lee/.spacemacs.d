@@ -9,33 +9,35 @@
 					))
 	;;快速创建todo事项的模板
 	(setq org-capture-templates
-				'(("t" "GTD" entry (file+headline "~/org-agenda/gtd.org" "工作安排")
+				'(
+          ;;工作GTD笔记
+          ("w" "工作安排" entry (file+headline "~/org-agenda/gtd.org" "工作安排")
 					 "* TODO [#B] %?\n %i\n %U"
 					 :empty-lines 1)
-					("c" "cyclic task" entry (file+headline "~/org-agenda/cyclic-task.org" "周期任务")
+          ;;生活GTD笔记
+					("l" "日常生活" entry (file+headline "~/org-agenda/gtd.org" "日程生活")
 					 "* TODO [#B] %?\n %i\n"
 					 :empty-lines 1)
-					("q" "question" entry (file+headline "~/org-agenda/gtd.org" "问题描述")
-					 "* TODO [#B] %?\n 问题描述：%?\n"
-					 :empty-lines 1)
-					("c" "cyclic task" entry (file+headline "~/org-agenda/cyclic-task.org" "周期任务")
-					 "* TODO [#B] %?\n %i\n"
-					 :empty-lines 1)
-					("l" "LEARN" entry (file+headline "~/org-agenda/learn.org" "学习")
+          ;;专题学习
+					("d" "设计模式专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-设计模式")
 					 "* TODO [#C] %?\n %i\n"
 					 :empty-lines 1)
-					("g" "golang" entry (file+headline "~/org-agenda/learn.org" "golang学习")
+					("g" "golang专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-golang")
 					 "* TODO [#C] %?\n %i\n"
 					 :empty-lines 1)
-					("C" "Clipboard" entry (file+headline "~/org-agenda/clipboard.org" "Quick notes")
+					("c" "快速记录" entry (file+headline "~/org-agenda/clipboard.org" "快速笔记")
 					 "* TODO [#C] %?\n clipboard: %(jony/get-paste-string) %i\n %U"
 					 )
-					("i" "IDEA" entry (file+headline "~/org-agenda/idea.org" "good idea")
-					 "* TODO [#B] %?\n %i\n"
-					 :empty-lines 1)
 					))
 	)
-
+;; (add-hook 'go-mode-hook
+;;           (lambda ()
+;;             (set (make-local-variable 'company-backends) '(company-anaconda))))
+;;(with-eval-after-load 'go
+;; (add-hook 'go-mode-hook
+;;           (lambda ()
+;;             (set (make-local-variable 'company-backends) '(lsp))
+ ;;          ))
 ;; reuse dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 

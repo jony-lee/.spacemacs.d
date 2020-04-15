@@ -64,14 +64,15 @@ This function should only modify configuration layer settings."
 		 (chinese :variables
 							chinese-enable-youdao-dict t
               chinese-enable-fcitx t)
-
 		 jony
 
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;;spell-checking
-
+     ;; (spell-checking :variables
+     ;;                 ispell-program-name "aspell"
+     ;;                 ispell-dictionary "american"
+     ;;                 )
      )
 
    ;; List of additional packages that will be installed without being
@@ -85,6 +86,8 @@ This function should only modify configuration layer settings."
                                       window-numbering
                                       path-headerline-mode
                                       posframe
+                                      pinyin-search
+                                      ;; cnfonts
                                       )
 
 	 ;; A list of packages that cannot be updated.
@@ -199,8 +202,9 @@ It should only modify the values of Spacemacs settings."
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    dotspacemacs-startup-lists '((recents . 3)
                                 (projects . 3)
-																(agenda . 3)
-                                (todos . 3))
+																;; (agenda . 3)
+                                ;; (todos . 3)
+                                )
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -529,6 +533,7 @@ before packages are loaded."
      (org-capture-refile . "^")
      (Man-completion-table . "^")
      (woman . "^"))))
+  (setq ivy-re-builders-alist '((t . jony/re-builder-extended-pattern)))
 	)
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
