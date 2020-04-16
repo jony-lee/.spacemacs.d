@@ -35,10 +35,13 @@
 but if the current currsor in a link string it will open it.
 "
   (interactive)
-  (condition-case nil (org-open-at-point)
+  (condition-case nil
+      (if (equal major-mode 'org-mode)
+          (org-open-at-point)
+        (org-open-at-point-global))
     (error (spacemacs/insert-line-below-no-indent 1)
-     (next-line 1)
-     )))
+           (next-line 1)
+           )))
 
 ;;thanks to http://wenshanren.org/?p=327
 
