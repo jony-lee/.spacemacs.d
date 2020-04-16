@@ -44,17 +44,31 @@ This function should only modify configuration layer settings."
      lsp
      multiple-cursors
      (auto-completion :variables
-											;; auto-completion-enable-help-tooltip t
-											auto-completion-enable-sort-by-usage t
-											auto-completion-idle-delay 0.1)
+		  								;; auto-completion-enable-help-tooltip t
+                      auto-completion-enable-snippets-in-popup t
+		  								auto-completion-enable-sort-by-usage t
+		  								auto-completion-idle-delay 0.1)
      syntax-checking
      ;;language list
      (go :variables
          go-tab-width 4
          go-format-before-save t
 				 gofmt-command "goimports"
+         godoc-at-point-function 'godoc-gogetdoc
 		 		 go-backend 'lsp
 		 		 )
+     ;; (python :variables
+     ;;         python-formatter 'yapf
+     ;;         python-format-on-save t
+     ;;         ;; python-test-runner '(nose pytest)
+     ;;         python-backend 'lsp
+     ;;         python-lsp-server 'mspyls
+     ;;         ;; python-lsp-git-root "~/Github/python-language-server"
+     ;;         )
+     ;; python
+     (wakatime :variables
+               ;; use the actual wakatime path
+               wakatime-cli-path "/usr/local/bin/wakatime")
      org
      markdown
      emacs-lisp
@@ -540,6 +554,8 @@ before packages are loaded."
 (load custom-file 'no-error 'no-message)
 
 (load (expand-file-name "macro.el" dotspacemacs-directory) 'no-error 'no-message)
+(load (expand-file-name "private.el" dotspacemacs-directory) 'no-error 'no-message)
+
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
 This is an auto-generated function, do not modify its content directly, use
