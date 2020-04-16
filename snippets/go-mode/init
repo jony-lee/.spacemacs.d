@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: func init()
-# key: init
+# key: ini
 # --
 func init() {
   $0

@@ -1,6 +1,6 @@
 # -*- mode:snippet -*-
 # name: const (...)
-# key: const
+# key: con
 # --
 const (
   ${1:name} ${2:type} = ${3:val}

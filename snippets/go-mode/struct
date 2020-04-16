@@ -1,4 +1,5 @@
 #name : struct
+#key : str
 # --
 type $1 struct {
 	$0

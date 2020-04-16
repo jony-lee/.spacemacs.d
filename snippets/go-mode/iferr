@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: if error
-# key: iferr
+# key: ife
 # --
 if err != $1 {
   $0

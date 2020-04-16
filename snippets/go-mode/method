@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: method
-# key: method
+# key: met
 # contributor: @Kunde21
 # --
 // $2 ${5:...}

@@ -64,11 +64,11 @@
 ;; (setq pyim-page-length 5)
 
 ;;配置缩写补全
-(setq-default abbrev-mode 1)
-(define-abbrev-table 'global-abbrev-table '(
-                                            ;; Shifu
-                                            ("8bd" "baidu")
-																						))
+;; (setq-default abbrev-mode 1)
+;; (define-abbrev-table 'global-abbrev-table '(
+;;                                             ;; Shifu
+;;                                             ("8bd" "baidu")
+;; 																						))
 ;;自定义modeline格式
 (setq-default mode-line-format
 							;; get current window number
