@@ -31,7 +31,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -95,7 +95,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present
+																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.

@@ -70,6 +70,7 @@
 (spacemacs/set-leader-keys "od" 'org-deadline)
 (spacemacs/set-leader-keys "oc" 'org-capture)
 
+(spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point-tooltip)
 (spacemacs/set-leader-keys "on" 'org-next-visible-heading)
 (spacemacs/set-leader-keys "op" 'org-previous-visible-heading)
 (spacemacs/set-leader-keys "ou" 'outline-up-heading)
