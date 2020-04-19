@@ -80,9 +80,10 @@ This function should only modify configuration layer settings."
               chinese-enable-fcitx t)
 		 jony
 
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'full
+            shell-default-shell 'shell)
      ;; (spell-checking :variables
      ;;                 ispell-program-name "aspell"
      ;;                 ispell-dictionary "american"
@@ -513,9 +514,9 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
 	(setq configuration-layer-elpa-archives
-				'(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-					("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-					("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+				'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+					("org-cn"   . "http://elpa.emacs-china.org/org/")
+					("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 	)
 
 (defun dotspacemacs/user-load ()
