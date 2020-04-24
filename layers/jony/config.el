@@ -26,7 +26,7 @@
 					 "* TODO [#C] %?\n %i\n"
 					 :empty-lines 1)
 					("c" "快速记录" entry (file+headline "~/org-agenda/clipboard.org" "快速笔记")
-					 "* TODO [#C] %?\n clipboard: %(jony/get-paste-string) %i\n %U"
+					 "* TODO [#C] %?\n ~clipboard~ : %(jony/get-paste-string) %i\n ~note~ : \n %U\n"
 					 )
 					))
 	)

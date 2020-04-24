@@ -31,6 +31,8 @@
 (define-key evil-insert-state-map (kbd "C-k") 'evil-previous-line)
 (define-key evil-insert-state-map (kbd "C-l") 'evil-forward-char)
 (define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line)
+(define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
+
 ;;设置函数区域匹配模式
 (define-key evil-normal-state-map (kbd ".") 'evil-jump-item)
 ;; 翻译
@@ -44,6 +46,7 @@
 (spacemacs/set-leader-keys "fef" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/funcs.el")))
 (spacemacs/set-leader-keys "fes" #'(lambda () (interactive) (dired-jump nil "~/.spacemacs.d/snippets/go-mode/")))
 (spacemacs/set-leader-keys "feo" #'(lambda () (interactive) (dired-jump nil "~/org-agenda/")))
+(spacemacs/set-leader-keys "fet" #'(lambda () (interactive) (find-file "~/org-agenda/table.org")))
 
 ;;配置自定义描述快捷键(一些描述帮助快捷键重新定)
 
