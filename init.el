@@ -66,9 +66,7 @@ This function should only modify configuration layer settings."
      ;;         ;; python-lsp-git-root "~/Github/python-language-server"
      ;;         )
      ;; python
-     (wakatime :variables
-               ;; use the actual wakatime path
-               wakatime-cli-path "/usr/local/bin/wakatime")
+     wakatime
      org
      markdown
      emacs-lisp
