@@ -68,14 +68,12 @@ This function should only modify configuration layer settings."
      ;; python
      wakatime
      org
+     protobuf
      markdown
      emacs-lisp
      ;; version-control
      treemacs
      ;;custom layer
-		 (chinese :variables
-							chinese-enable-youdao-dict t
-              chinese-enable-fcitx t)
 		 jony
 
      (shell :variables
@@ -256,9 +254,9 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font or prioritized list of fonts.
    dotspacemacs-default-font '(
-                               "Source Code Pro"
+                               "Monaco"
                                ;;"Consolas"
-                               :size 11.0
+                               :size 12.0
                                :weight normal
                                :width normal)
 
@@ -352,16 +350,16 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
 
    ;; If non-nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
-   dotspacemacs-fullscreen-use-non-native t
+   dotspacemacs-fullscreen-use-non-native nil
 
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
 
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
@@ -512,11 +510,12 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-	(setq configuration-layer-elpa-archives
-				'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-					("org-cn"   . "http://elpa.emacs-china.org/org/")
-					("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
-	)
+(setq configuration-layer-elpa-archives
+    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+)
+
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.

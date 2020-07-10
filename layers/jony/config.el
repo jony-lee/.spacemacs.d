@@ -30,6 +30,9 @@
 					 )
 					))
 	)
+(when (eq system-type 'darwin)
+  (require 'ls-lisp)
+  (setq ls-lisp-use-insert-directory-program nil))
 ;; (add-hook 'go-mode-hook
 ;;           (lambda ()
 ;;             (set (make-local-variable 'company-backends) '(company-anaconda))))

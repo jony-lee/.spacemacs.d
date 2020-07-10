@@ -51,8 +51,8 @@
 ;;配置自定义描述快捷键(一些描述帮助快捷键重新定)
 
 
-(spacemacs/set-leader-keys "dB" 'spacemacs/browse-docs-online-at-point)
-(spacemacs/set-leader-keys "db" 'describe-bindings)
+;; (spacemacs/set-leader-keys "dB" 'spacemacs/browse-docs-online-at-point)
+(spacemacs/set-leader-keys "dB" 'describe-bindings)
 (spacemacs/set-leader-keys "dc" 'customize-group)
 (spacemacs/set-leader-keys "dC" 'describe-char)
 (spacemacs/set-leader-keys "df" 'describe-function)
