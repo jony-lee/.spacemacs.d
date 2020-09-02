@@ -139,7 +139,7 @@
 							 ;; global-mode-string goes in mode-line-misc-info
 							 mode-line-misc-info
 
-							 (mode-line-fill 'mode-line 38)
+							 (mode-line-fill 'mode-line 50)
 
 							 ;; line and column
 							 ;; '%02' to set to 2 chars at least; prevents flickering

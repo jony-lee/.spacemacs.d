@@ -4,8 +4,8 @@
 (define-key evil-motion-state-map (kbd "C-e") nil)
 (define-key evil-normal-state-map (kbd "gb") 'dumb-jump-back)
 (define-key evil-normal-state-map (kbd "RET") 'jony/insert-line-or-open-link)
-(define-key evil-normal-state-map (kbd "<deletechar>") 'delete-char)
-(define-key evil-normal-state-map (kbd "DEL") 'backward-delete-char)
+;; (define-key evil-normal-state-map (kbd "<deletechar>") 'delete-char)
+;; (define-key evil-normal-state-map (kbd "DEL") 'backward-delete-char)
 
 ;;org相关操作
 (define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point-tooltip)
