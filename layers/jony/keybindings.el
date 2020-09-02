@@ -37,6 +37,7 @@
 (define-key evil-normal-state-map (kbd ".") 'evil-jump-item)
 ;; 翻译
 (spacemacs/set-leader-keys "\`" 'spacemacs/alternate-window)
+(spacemacs/set-leader-keys "<right>" 'spacemacs/alternate-window)
 ;; (spacemacs/set-leader-keys "\`" 'youdao-dictionary-search-at-point-tooltip)
 ;; 快速访问jony配置
 (spacemacs/set-leader-keys "fer" 'dotspacemacs/sync-configuration-layers)

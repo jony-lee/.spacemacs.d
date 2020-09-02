@@ -31,7 +31,9 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(html
+   '(
+     ;; python
+     html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -66,7 +68,7 @@ This function should only modify configuration layer settings."
      ;;         ;; python-lsp-git-root "~/Github/python-language-server"
      ;;         )
      ;; python
-     wakatime
+     ;; wakatime
      org
      protobuf
      markdown
@@ -429,7 +431,7 @@ It should only modify the values of Spacemacs settings."
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
    dotspacemacs-highlight-delimiters 'all
-
+   G
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
    dotspacemacs-enable-server nil
