@@ -152,3 +152,38 @@ but if the current currsor in a link string it will open it.
             (setq i (1+ i))))
         (setq str rlt))))
     (ivy--regex-plus str)))
+
+;; (defun jony/re-builder-extended-pattern (str)
+;;   "Build regex compatible with pinyin from STR."
+;;   (let* ((len (length str)))
+;;     (cond
+;;      ;; do nothing
+;;      ((<= (length str) 0))
+
+;;      ;; If the first charater of input in ivy is ":",
+;;      ;; remaining input is converted into Chinese pinyin regex.
+;;      ;; For example, input "/ic" match "isController" or "isCollapsed"
+;;      ((string= (substring str 0 1) ":")
+;;       (setq str (pinyinlib-build-regexp-string (substring str 1 len) t)))
+
+;;      ;; If the first charater of input in ivy is "/",
+;;      ;; remaining input is converted to pattern to search camel case word
+;;      ((string= (substring str 0 1) "/")
+;;       (let* ((rlt "")
+;;              (i 0)
+;;              (subs (substring str 1 len))
+;;              c)
+;;         (when (> len 2)
+;;           (setq subs (upcase subs))
+;;           (while (< i (length subs))
+;;             (setq c (elt subs i))
+;;             (setq rlt (concat rlt (cond
+;;                                    ((and (< c ?a) (> c ?z) (< c ?A) (> c ?Z))
+;;                                     (format "%c" c))
+;;                                    (t
+;;                                     (concat (if (= i 0) (format "[%c%c]" (+ c 32) c)
+;;                                               (format "%c" c))
+;;                                             "[a-z]+")))))
+;;             (setq i (1+ i))))
+;;         (setq str rlt))))
+;;     (ivy--regex-plus str)))

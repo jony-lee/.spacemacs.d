@@ -31,7 +31,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(python
+     sql
      ;; python
      html
      ;; ----------------------------------------------------------------
@@ -51,21 +52,22 @@ This function should only modify configuration layer settings."
 		  								auto-completion-enable-sort-by-usage t
 		  								auto-completion-idle-delay 0.1)
      syntax-checking
+     go
      ;;language list
-     (go :variables
-         go-tab-width 4
-         go-format-before-save t
-				 gofmt-command "goimports"
-         godoc-at-point-function 'godoc-gogetdoc
-		 		 go-backend 'lsp
-		 		 )
+     ;; (go :variables
+     ;;     go-tab-width 4
+     ;;     go-format-before-save t
+		 ;;  	 gofmt-command "goimports"
+     ;;     godoc-at-point-function 'godoc-gogetdoc
+		 ;; 		 go-backend 'lsp
+		 ;; 		 )
      ;; (python :variables
      ;;         python-formatter 'yapf
      ;;         python-format-on-save t
      ;;         ;; python-test-runner '(nose pytest)
      ;;         python-backend 'lsp
      ;;         python-lsp-server 'mspyls
-     ;;         ;; python-lsp-git-root "~/Github/python-language-server"
+     ;;         ;; python-lsp-git-root "~/github/python-language-server"
      ;;         )
      ;; python
      ;; wakatime
@@ -77,7 +79,7 @@ This function should only modify configuration layer settings."
      treemacs
      ;;custom layer
 		 jony
-
+     gtags
      (shell :variables
             shell-default-height 30
             shell-default-position 'full
@@ -99,6 +101,7 @@ This function should only modify configuration layer settings."
                                       window-numbering
                                       path-headerline-mode
                                       posframe
+                                      pinyinlib
                                       pinyin-search
                                       ;; cnfonts
                                       )
@@ -433,7 +436,7 @@ It should only modify the values of Spacemacs settings."
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
    dotspacemacs-highlight-delimiters 'all
-   
+
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
    dotspacemacs-enable-server nil
@@ -537,19 +540,19 @@ before packages are loaded."
   (global-hungry-delete-mode)
   (path-headerline-mode)
   (window-numbering-mode)
-  (setq-default ivy-initial-inputs-alist
-   (quote
-    ((counsel-minor . "^+")
-     (counsel-package . "^+")
-     (counsel-org-capture . "")
-     (counsel-M-x . "")
-     (counsel-describe-function . "")
-     (counsel-describe-variable . "")
-     (org-refile . "^")
-     (org-agenda-refile . "^")
-     (org-capture-refile . "^")
-     (Man-completion-table . "^")
-     (woman . "^"))))
+  ;; (setq-default ivy-initial-inputs-alist
+  ;;  (quote
+  ;;   ((counsel-minor . "^+")
+  ;;    (counsel-package . "^+")
+  ;;    (counsel-org-capture . "")
+  ;;    (counsel-M-x . "")
+  ;;    (counsel-describe-function . "")
+  ;;    (counsel-describe-variable . "")
+  ;;    (org-refile . "^")
+  ;;    (org-agenda-refile . "^")
+  ;;    (org-capture-refile . "^")
+  ;;    (Man-completion-table . "^")
+  ;;    (woman . "^"))))
   (setq ivy-re-builders-alist '((t . jony/re-builder-extended-pattern)))
 	)
 
