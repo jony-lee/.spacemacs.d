@@ -18,16 +18,16 @@
 					("l" "日常生活" entry (file+headline "~/org-agenda/gtd.org" "日程生活")
 					 "* TODO [#B] %?\n %i\n"
 					 :empty-lines 1)
-          ;;专题学习
-					("d" "设计模式专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-设计模式")
-					 "* TODO [#C] %?\n %i\n"
-					 :empty-lines 1)
-					("g" "golang专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-golang")
-					 "* TODO [#C] %?\n %i\n"
-					 :empty-lines 1)
 					("c" "快速记录" entry (file+headline "~/org-agenda/clipboard.org" "快速笔记")
 					 "* TODO [#C] %?\n ~clipboard~ : %(jony/get-paste-string) %i\n ~note~ : \n %U\n"
 					 )
+          ;;专题学习
+					;; ("d" "设计模式专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-设计模式")
+					;;  "* TODO [#C] %?\n %i\n"
+					;;  :empty-lines 1)
+					;; ("g" "golang专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-golang")
+					;;  "* TODO [#C] %?\n %i\n"
+					;;  :empty-lines 1)
 					))
 	)
 (when (eq system-type 'darwin)
