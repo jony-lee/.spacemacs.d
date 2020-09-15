@@ -113,7 +113,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets dap-mode
+																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets dap-mode font-lock+
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.

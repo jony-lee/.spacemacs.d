@@ -28,7 +28,7 @@
 ;;evil插入模式下的光标移动
 (define-key evil-insert-state-map (kbd "C-h") 'evil-backward-char)
 (define-key evil-insert-state-map (kbd "C-j") 'evil-next-line)
-(define-key evil-insert-state-map (kbd "C-k") 'evil-previous-line)
+;; (define-key evil-insert-state-map (kbd "C-k") 'evil-previous-line)
 (define-key evil-insert-state-map (kbd "C-l") 'evil-forward-char)
 (define-key evil-insert-state-map (kbd "C-a") 'mwim-beginning-of-code-or-line)
 (define-key evil-insert-state-map (kbd "C-e") 'mwim-end-of-code-or-line)
