@@ -546,6 +546,8 @@ before packages are loaded."
   (global-hungry-delete-mode)
   (path-headerline-mode)
   (window-numbering-mode)
+  (xterm-mouse-mode -1)
+
   ;; (setq-default ivy-initial-inputs-alist
   ;;  (quote
   ;;   ((counsel-minor . "^+")

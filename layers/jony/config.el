@@ -30,7 +30,6 @@
 					;;  :empty-lines 1)
 					))
 	)
-(xterm-mouse-mode -1)
 ;; mac和emacs共享剪贴板
 (defun copy-from-osx ()
   (shell-command-to-string "pbpaste"))
