@@ -30,6 +30,20 @@
 					;;  :empty-lines 1)
 					))
 	)
+;; mac和emacs共享剪贴板
+(defun copy-from-osx ()
+  (shell-command-to-string "pbpaste"))
+
+(defun paste-to-osx (text &optional push)
+  (let ((process-connection-type nil))
+    (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+      (process-send-string proc text)
+      (process-send-eof proc))))
+
+(when (string= system-type "darwin")
+  (setq interprogram-cut-function 'paste-to-osx)
+  (setq interprogram-paste-function 'copy-from-osx))
+
 (when (eq system-type 'darwin)
   (require 'ls-lisp)
   (setq ls-lisp-use-insert-directory-program nil))
