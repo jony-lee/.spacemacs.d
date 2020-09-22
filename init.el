@@ -31,12 +31,16 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(javascript
+   '(yaml
+     javascript
      javascript
      python
      sql
      ;; python
      html
+     (restclient :variables
+                 restclient-use-org t
+                 )
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -46,7 +50,7 @@ This function should only modify configuration layer settings."
      ;;helm
      better-defaults
      git
-     lsp
+     ;; lsp
      multiple-cursors
      (auto-completion :variables
 		  								;; auto-completion-enable-help-tooltip t
@@ -56,13 +60,13 @@ This function should only modify configuration layer settings."
      syntax-checking
      go
      ;;language list
-     ;; (go :variables
-     ;;     go-tab-width 4
-     ;;     go-format-before-save t
-		 ;;  	 gofmt-command "goimports"
-     ;;     godoc-at-point-function 'godoc-gogetdoc
-		 ;; 		 go-backend 'lsp
-		 ;; 		 )
+     (go :variables
+         go-tab-width 4
+         go-format-before-save t
+		  	 gofmt-command "goimports"
+         ;; godoc-at-point-function 'godoc-gogetdoc
+		 		 ;; go-backend 'lsp
+		 		 )
      ;; (python :variables
      ;;         python-formatter 'yapf
      ;;         python-format-on-save t

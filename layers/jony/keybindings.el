@@ -1,6 +1,7 @@
 ;;evil-normal-state 有两个附加命令集，z和g,部分命令可以banding到这两个命令下操作，更快捷
 ;;取消部分快捷键冲突
 ;;evil快捷键冲突
+(setq-default evil-escape-key-sequence "jk")
 (define-key evil-motion-state-map (kbd "C-e") nil)
 (define-key evil-normal-state-map (kbd "gb") 'dumb-jump-back)
 (define-key evil-normal-state-map (kbd "RET") 'jony/insert-line-or-open-link)
@@ -23,8 +24,8 @@
 
 (define-key dired-mode-map (kbd "<tab>") 'dired-find-file-other-window)
 
-(define-key undo-tree-map (kbd "C-/") nil)
-(define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
+;; (define-key undo-tree-map (kbd "C-/") nil)
+;; (define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
 ;;evil插入模式下的光标移动
 (define-key evil-insert-state-map (kbd "C-h") 'evil-backward-char)
 (define-key evil-insert-state-map (kbd "C-j") 'evil-next-line)
@@ -91,4 +92,4 @@
 ;;配置代码跳转和跳回，建议使用evil-normal-state 绑定的快捷键，少一次SPC操作，更快捷
 (spacemacs/set-leader-keys (kbd "jg") 'spacemacs/jump-to-definition)
 (spacemacs/set-leader-keys (kbd "jG") 'spacemacs/jump-to-definition-other-window)
-(spacemacs/set-leader-keys (kbd "jb") 'dumb-jump-back)
+(spacemacs/set-leader-keys (kbd "jb") 'xref-pop-marker-stack)
