@@ -552,19 +552,19 @@ before packages are loaded."
   (window-numbering-mode)
   (xterm-mouse-mode -1)
 
-  ;; (setq-default ivy-initial-inputs-alist
-  ;;  (quote
-  ;;   ((counsel-minor . "^+")
-  ;;    (counsel-package . "^+")
-  ;;    (counsel-org-capture . "")
-  ;;    (counsel-M-x . "")
-  ;;    (counsel-describe-function . "")
-  ;;    (counsel-describe-variable . "")
-  ;;    (org-refile . "^")
-  ;;    (org-agenda-refile . "^")
-  ;;    (org-capture-refile . "^")
-  ;;    (Man-completion-table . "^")
-  ;;    (woman . "^"))))
+  (setq-default ivy-initial-inputs-alist
+   (quote
+    ((counsel-minor . "^+")
+     (counsel-package . "^+")
+     (counsel-org-capture . "")
+     (counsel-M-x . "")
+     (counsel-describe-function . "")
+     (counsel-describe-variable . "")
+     (org-refile . "^")
+     (org-agenda-refile . "^")
+     (org-capture-refile . "^")
+     (Man-completion-table . "^")
+     (woman . "^"))))
   (setq ivy-re-builders-alist '((t . jony/re-builder-extended-pattern)))
 	)
 
