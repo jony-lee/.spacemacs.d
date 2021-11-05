@@ -1,7 +1,6 @@
 ;;evil-normal-state 有两个附加命令集，z和g,部分命令可以banding到这两个命令下操作，更快捷
 ;;取消部分快捷键冲突
 ;;evil快捷键冲突
-(setq-default evil-escape-key-sequence "jk")
 (define-key evil-motion-state-map (kbd "C-e") nil)
 (define-key evil-normal-state-map (kbd "gb") 'dumb-jump-back)
 (define-key evil-normal-state-map (kbd "RET") 'jony/insert-line-or-open-link)
@@ -9,7 +8,7 @@
 ;; (define-key evil-normal-state-map (kbd "DEL") 'backward-delete-char)
 
 ;;org相关操作
-(define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point-tooltip)
+(define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point+)
 (define-key global-map (kbd "C-c s") 'org-schedule)
 (define-key global-map (kbd "C-c d") 'org-deadline)
 (define-key global-map (kbd "C-c t") 'org-todo)
@@ -22,7 +21,7 @@
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
   )
 
-(define-key dired-mode-map (kbd "<tab>") 'dired-find-file-other-window)
+;; (define-key dired-mode-map (kbd "<tab>") 'dired-find-file-other-window)
 
 ;; (define-key undo-tree-map (kbd "C-/") nil)
 ;; (define-key global-map (kbd "C-/") 'evilnc-comment-or-uncomment-lines)
@@ -44,6 +43,7 @@
 (spacemacs/set-leader-keys "fer" 'dotspacemacs/sync-configuration-layers)
 (spacemacs/set-leader-keys "fej" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/config.el")))
 (spacemacs/set-leader-keys "da" #'(lambda () (interactive) (dired-jump nil "~/.spacemacs.d/")))
+(spacemacs/set-leader-keys "fp" #'(lambda () (interactive) (dired-jump nil "~/project")))
 (spacemacs/set-leader-keys "fek" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/keybindings.el")))
 (spacemacs/set-leader-keys "fef" #'(lambda () (interactive) (find-file "~/.spacemacs.d/layers/jony/funcs.el")))
 (spacemacs/set-leader-keys "fes" #'(lambda () (interactive) (dired-jump nil "~/.spacemacs.d/snippets/go-mode/")))

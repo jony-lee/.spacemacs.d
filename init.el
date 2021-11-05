@@ -33,14 +33,14 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(yaml
      javascript
-     javascript
+     ;; javascript
      python
      sql
      ;; python
      html
-     (restclient :variables
-                 restclient-use-org t
-                 )
+     ;; (restclient :variables
+     ;;             restclient-use-org t
+     ;;             )
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -57,8 +57,8 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-snippets-in-popup t
 		  								auto-completion-enable-sort-by-usage t
 		  								auto-completion-idle-delay 0.1)
-     syntax-checking
-     go
+     ;; syntax-checking
+     ;; go
      ;;language list
      (go :variables
          go-tab-width 4
@@ -78,8 +78,10 @@ This function should only modify configuration layer settings."
      ;; python
      ;; wakatime
      org
-     protobuf
+     ;; protobuf
      markdown
+	 (chinese :variables
+              chinese-enable-youdao-dict t)
      emacs-lisp
      ;; version-control
      treemacs
@@ -87,13 +89,8 @@ This function should only modify configuration layer settings."
 		 jony
      gtags
      (shell :variables
-            shell-default-height 30
-            shell-default-position 'full
+            shell-default-height 15
             shell-default-shell 'shell)
-     ;; (spell-checking :variables
-     ;;                 ispell-program-name "aspell"
-     ;;                 ispell-dictionary "american"
-     ;;                 )
      )
 
    ;; List of additional packages that will be installed without being
@@ -104,11 +101,8 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
-                                      window-numbering
                                       path-headerline-mode
                                       posframe
-                                      pinyinlib
-                                      pinyin-search
                                       ;; cnfonts
                                       )
 
@@ -117,7 +111,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		smooth-scrolling spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets dap-mode font-lock+
+																		 spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets dap-mode font-lock+
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
