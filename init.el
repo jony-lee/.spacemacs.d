@@ -31,11 +31,13 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(yaml
-     javascript
+   '(
+	 ;; yaml
+     ;; javascript
      ;; javascript
      python
-     sql
+     ;; sql
+	 ;; rust
      ;; python
      html
      ;; (restclient :variables
@@ -84,7 +86,7 @@ This function should only modify configuration layer settings."
               chinese-enable-youdao-dict t)
      emacs-lisp
      ;; version-control
-     treemacs
+     ;; treemacs
      ;;custom layer
 		 jony
      gtags
@@ -111,7 +113,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		 spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets dap-mode font-lock+
+																		nose inspector spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets info+ font-lock+
 																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -543,7 +545,6 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-hungry-delete-mode)
   (path-headerline-mode)
-  (window-numbering-mode)
   (xterm-mouse-mode -1)
 
   (setq-default ivy-initial-inputs-alist
