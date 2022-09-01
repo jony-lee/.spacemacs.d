@@ -2,6 +2,7 @@
 ;;取消部分快捷键冲突
 ;;evil快捷键冲突
 (define-key evil-motion-state-map (kbd "C-e") nil)
+(define-key  global-map(kbd "C-j") nil)
 (define-key evil-normal-state-map (kbd "gb") 'dumb-jump-back)
 (define-key evil-normal-state-map (kbd "RET") 'jony/insert-line-or-open-link)
 ;; (define-key evil-normal-state-map (kbd "<deletechar>") 'delete-char)

@@ -79,7 +79,7 @@ This function should only modify configuration layer settings."
      ;;         )
      ;; python
      ;; wakatime
-     org
+     ;; org
      ;; protobuf
      markdown
 	 (chinese :variables
@@ -563,9 +563,7 @@ before packages are loaded."
   (setq ivy-re-builders-alist '((t . jony/re-builder-extended-pattern)))
 	)
 
-(setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-(load custom-file 'no-error 'no-message)
-
+(load (expand-file-name "custom.el" dotspacemacs-directory) 'no-error 'no-message)
 (load (expand-file-name "macro.el" dotspacemacs-directory) 'no-error 'no-message)
 (load (expand-file-name "private.el" dotspacemacs-directory) 'no-error 'no-message)
 
