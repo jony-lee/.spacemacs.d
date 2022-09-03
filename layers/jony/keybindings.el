@@ -8,7 +8,7 @@
 ;; (define-key evil-normal-state-map (kbd "DEL") 'backward-delete-char)
 
 ;;org相关操作
-(define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "C-c y") 'youdao-dictionary-search-at-point-posframe)
 (define-key global-map (kbd "C-c s") 'org-schedule)
 (define-key global-map (kbd "C-c d") 'org-deadline)
 (define-key global-map (kbd "C-c t") 'org-todo)
@@ -75,7 +75,7 @@
 (spacemacs/set-leader-keys "od" 'org-deadline)
 (spacemacs/set-leader-keys "oc" 'org-capture)
 
-(spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point-tooltip)
+(spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point-posframe)
 (spacemacs/set-leader-keys "on" 'org-next-visible-heading)
 (spacemacs/set-leader-keys "op" 'org-previous-visible-heading)
 (spacemacs/set-leader-keys "ou" 'outline-up-heading)
