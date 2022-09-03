@@ -3,33 +3,37 @@
 ;; (setq create-lockfiles nil)
 ;; org setting
 (with-eval-after-load 'org
-	;; (setq-default org-agenda-files '("~/org-agenda"))
-	(setq org-todo-keywords
-				'((sequence "TODO(t!)" "NEXT(n@/!)" "|" "DONE(d@/!)" "ABORT(a@/!)")
-					))
-	;;快速创建todo事项的模板
-	(setq org-capture-templates
-				'(
-          ;;工作GTD笔记
-          ("w" "工作安排" entry (file+headline "~/org-agenda/gtd.org" "工作安排")
-					 "* TODO [#B] %?\n %i\n %U"
-					 :empty-lines 1)
-          ;;生活GTD笔记
-					("l" "日常生活" entry (file+headline "~/org-agenda/gtd.org" "日程生活")
-					 "* TODO [#B] %?\n %i\n"
-					 :empty-lines 1)
-					("c" "快速记录" entry (file+headline "~/org-agenda/clipboard.org" "快速笔记")
-					 "* TODO [#C] %?\n ~clipboard~ : %(jony/get-paste-string) %i\n ~note~ : \n %U\n"
-					 )
-          ;;专题学习
-					;; ("d" "设计模式专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-设计模式")
-					;;  "* TODO [#C] %?\n %i\n"
-					;;  :empty-lines 1)
-					;; ("g" "golang专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-golang")
-					;;  "* TODO [#C] %?\n %i\n"
-					;;  :empty-lines 1)
-					))
-	)
+  ;; (setq-default org-agenda-files '("~/org-agenda"))
+  (setq org-todo-keywords '((sequence "TODO(t!)" "NEXT(n@/!)" "|" "DONE(d@/!)"
+									  "ABORT(a@/!)")))
+  ;;快速创建todo事项的模板
+  (setq org-capture-templates '(
+								;;工作GTD笔记
+								("w" "工作安排"
+								 entry
+								 (file+headline "~/org-agenda/gtd.org" "工作安排")
+								 "* TODO [#B] %?\n %i\n %U"
+								 :empty-lines 1)
+								;;生活GTD笔记
+
+								("l" "日常生活"
+								 entry
+								 (file+headline "~/org-agenda/gtd.org" "日程生活")
+								 "* TODO [#B] %?\n %i\n"
+								 :empty-lines 1)
+								("c" "快速记录"
+								 entry
+								 (file+headline "~/org-agenda/clipboard.org"
+												"快速笔记")
+								 "* TODO [#C] %?\n ~clipboard~ : %(jony/get-paste-string) %i\n ~note~ : \n %U\n")
+								;;专题学习
+								;; ("d" "设计模式专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-设计模式")
+								;;  "* TODO [#C] %?\n %i\n"
+								;;  :empty-lines 1)
+								;; ("g" "golang专题" entry (file+headline "~/org-agenda/learn.org" "专题学习-golang")
+								;;  "* TODO [#C] %?\n %i\n"
+								;;  :empty-lines 1)
+								)))
 ;; mac和emacs共享剪贴板
 ;; (defun copy-from-osx ()
 ;;   (shell-command-to-string "pbpaste"))
