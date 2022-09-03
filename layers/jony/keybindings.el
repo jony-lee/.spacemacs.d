@@ -2,8 +2,7 @@
 ;;取消部分快捷键冲突
 ;;evil快捷键冲突
 (define-key evil-motion-state-map (kbd "C-e") nil)
-(define-key  global-map(kbd "C-j") nil)
-(define-key evil-normal-state-map (kbd "gb") 'dumb-jump-back)
+(define-key  global-map (kbd "C-j") nil)
 (define-key evil-normal-state-map (kbd "RET") 'jony/insert-line-or-open-link)
 ;; (define-key evil-normal-state-map (kbd "<deletechar>") 'delete-char)
 ;; (define-key evil-normal-state-map (kbd "DEL") 'backward-delete-char)
@@ -14,8 +13,8 @@
 (define-key global-map (kbd "C-c d") 'org-deadline)
 (define-key global-map (kbd "C-c t") 'org-todo)
 (define-key global-map (kbd "C-<return>") 'hippie-expand)
-(spacemacs/set-leader-keys-for-major-mode 'org-mode "ic" 'jony/insert-src-block)
 (with-eval-after-load 'org
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "ic" 'jony/insert-src-block)
   (define-key org-src-mode-map (kbd "C-c C-c") 'org-edit-src-exit)
   (define-key org-mode-map (kbd "<normal-state> RET") 'jony/insert-line-or-open-link)
   ;;超80字符自动换行
@@ -91,6 +90,9 @@
 (spacemacs/set-leader-keys "pf" 'jony/open-file-with-projectile-or-counsel-git)
 
 ;;配置代码跳转和跳回，建议使用evil-normal-state 绑定的快捷键，少一次SPC操作，更快捷
+(define-key evil-normal-state-map (kbd "gb") 'dumb-jump-back)
+;; gitstatus快捷键，使用gs快捷按起来比较别扭
+(spacemacs/set-leader-keys (kbd "gg") 'magit-status)
 (spacemacs/set-leader-keys (kbd "jg") 'spacemacs/jump-to-definition)
 (spacemacs/set-leader-keys (kbd "jG") 'spacemacs/jump-to-definition-other-window)
 (spacemacs/set-leader-keys (kbd "jb") 'xref-pop-marker-stack)

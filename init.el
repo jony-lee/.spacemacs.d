@@ -546,7 +546,7 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-hungry-delete-mode)
   ;; (path-headerline-mode)
-  (xterm-mouse-mode -1)
+  ;; (xterm-mouse-mode -1)
 
   (setq-default ivy-initial-inputs-alist
    (quote

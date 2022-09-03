@@ -1,4 +1,4 @@
-;; (setq-default indent-tabs-mode 1)
+; (setq-default indent-tabs-mode 1)
 ;; (setq-default default-tab-width 4)
 ;; (setq create-lockfiles nil)
 ;; org setting
@@ -94,7 +94,7 @@
 (setq-default mode-line-format
 			  ;; get current window number
 			  (list
-			   " "
+			   ;; " "
 			   ;; '(:eval (propertize
 			   ;;          (window-number-mode-line)
 			   ;; 					'face
@@ -104,17 +104,14 @@
 			   '(:eval (jony/update-persp-name))
 			   "] "
 			   ;; the buffer name; the file name as a tool tip
-			   '(:eval (propertize "%b " 'face 'font-lock-keyword-face
+			   '(:eval (propertize "%b" 'face 'font-lock-keyword-face
 								   'help-echo (buffer-file-name)))
 
-			   "["
+			   " ["
 			   ;; insert vs overwrite mode, input-method in a tooltip
 			   '(:eval (propertize (if overwrite-mode "Ovr" "Ins")
 								   'face 'font-lock-preprocessor-face
-								   'help-echo (concat "Buffer is in "
-													  (if overwrite-mode
-														  "overwrite"
-														"insert") " mode")))
+								   'help-echo (format "Buffer is in %s mode" (if overwrite-mode "overwrite" "insert"))))
 
 			   ;; was this buffer modified since the last save?
 			   '(:eval (when (buffer-modified-p)
@@ -141,7 +138,7 @@
 								   'help-echo buffer-file-coding-system))
 
 			   ;; my-flycheck-mode-line
-			   ;; "%1 "
+			   "%1 "
 
 			   ;; evil state
 			   '(:eval evil-mode-line-tag)
@@ -157,7 +154,7 @@
 			   ;; global-mode-string goes in mode-line-misc-info
 			   mode-line-misc-info
 
-			   (mode-line-fill 'mode-line 50)
+			   (mode-line-fill 'mode-line 40)
 
 			   ;; line and column
 			   ;; '%02' to set to 2 chars at least; prevents flickering
@@ -169,5 +166,5 @@
 								   'help-echo
 								   (concat (format-time-string "%c; ")
 										   (emacs-uptime "uptime:%hh"))))
-			   mode-line-end-spaces
+			   ;; mode-line-end-spaces
 			   ))
