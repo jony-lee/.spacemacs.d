@@ -35,6 +35,7 @@ This function should only modify configuration layer settings."
 	 ;; yaml
      ;; javascript
      ;; javascript
+	 semantic
      python
      ;; sql
 	 ;; rust
@@ -52,23 +53,23 @@ This function should only modify configuration layer settings."
      ;;helm
      better-defaults
      git
-     ;; lsp
+     lsp
      multiple-cursors
      (auto-completion :variables
-		  								;; auto-completion-enable-help-tooltip t
+		  			  ;; auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
-		  								auto-completion-enable-sort-by-usage t
-		  								auto-completion-idle-delay 0.1)
+		  			  auto-completion-enable-sort-by-usage t
+		  			  auto-completion-idle-delay 0.1)
      ;; syntax-checking
      ;; go
      ;;language list
      (go :variables
          go-tab-width 4
          go-format-before-save t
-		  	 gofmt-command "goimports"
+		 gofmt-command "goimports"
          ;; godoc-at-point-function 'godoc-gogetdoc
-		 		 ;; go-backend 'lsp
-		 		 )
+		 ;; go-backend 'lsp
+		 )
      ;; (python :variables
      ;;         python-formatter 'yapf
      ;;         python-format-on-save t
@@ -113,8 +114,8 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-																		nose inspector spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets info+ font-lock+
-																		)
+									nose inspector spray spaceline magit-gitflow org-projectile org-brain org-repo-todo org-download org-timer org-present yasnippet-snippets info+ font-lock+
+										 )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -544,7 +545,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-hungry-delete-mode)
-  (path-headerline-mode)
+  ;; (path-headerline-mode)
   (xterm-mouse-mode -1)
 
   (setq-default ivy-initial-inputs-alist

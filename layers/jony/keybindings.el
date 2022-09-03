@@ -88,7 +88,7 @@
 (spacemacs/set-leader-keys "ps" 'spacemacs/search-project-auto-region-or-symbol)
 (spacemacs/set-leader-keys "C-s" 'spacemacs/search-project-auto)
 (define-key evil-normal-state-map (kbd "/") 'swiper)
-;; (spacemacs/set-leader-keys "pf" 'jony/open-file-with-projectile-or-counsel-git)
+(spacemacs/set-leader-keys "pf" 'jony/open-file-with-projectile-or-counsel-git)
 
 ;;配置代码跳转和跳回，建议使用evil-normal-state 绑定的快捷键，少一次SPC操作，更快捷
 (spacemacs/set-leader-keys (kbd "jg") 'spacemacs/jump-to-definition)
