@@ -36,7 +36,9 @@ This function should only modify configuration layer settings."
      ;; javascript
      ;; javascript
 	 semantic
-     python
+   python
+	 chinese
+	 ;; themes-megapack
      ;; sql
 	 ;; rust
      ;; python
@@ -82,7 +84,7 @@ This function should only modify configuration layer settings."
      ;; wakatime
      ;; org
      ;; protobuf
-     markdown
+     (markdown :variables markdown-live-preview-engine 'vmd)
 	 (chinese :variables
               chinese-enable-youdao-dict t)
      emacs-lisp
@@ -547,7 +549,7 @@ before packages are loaded."
   (global-hungry-delete-mode)
   ;; (path-headerline-mode)
   ;; (xterm-mouse-mode -1)
-
+  (setq pyim-page-tooltip '(posframe popup minibuffer))
   (setq-default ivy-initial-inputs-alist
    (quote
     ((counsel-minor . "^+")
